@@ -8,3 +8,11 @@ ActiveRecord::Base.establish_connection(
 )
 
 DatabaseCleaner.strategy = :truncation, { except: %w[puppies users] }
+
+Before do
+  DatabaseCleaner.start
+end
+
+After do
+  DatabaseCleaner.clean
+end
