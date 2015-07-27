@@ -136,8 +136,13 @@ end
 #   on(CheckoutPage).checkout('name' => name)
 # end
 
+# Given /^I have a pending adoption for "([^"]*)"$/ do |name|
+#   navigate_to(CheckoutPage).checkout('name' => name)
+#
+
 Given /^I have a pending adoption for "([^"]*)"$/ do |name|
-  navigate_to(CheckoutPage).checkout('name' => name)
+  order = build(:order, :name => name)
+  create(:adoption, :order => order)
 end
 
 When(/^I process that adoption$/) do
