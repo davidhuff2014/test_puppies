@@ -138,7 +138,7 @@ end
 
 # Given /^I have a pending adoption for "([^"]*)"$/ do |name|
 #   navigate_to(CheckoutPage).checkout('name' => name)
-#
+# end
 
 Given /^I have a pending adoption for "([^"]*)"$/ do |name|
   order = build(:order, :name => name)
