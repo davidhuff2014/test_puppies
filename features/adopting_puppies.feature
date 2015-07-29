@@ -88,3 +88,9 @@ Feature: Adopting Puppies
     Given I have a pending adoption for "Tom Jones"
     When I process that adoption
     Then I should see "Please thank Tom Jones for the order!"
+
+  Scenario: Delivered on date should be set when a puppy is processed
+    Given I have a pending adoption for "Dog Lover"
+    When I process that adoption
+    Then the adoption delivered on date should be set to the current time
+
