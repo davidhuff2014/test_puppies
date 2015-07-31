@@ -140,8 +140,6 @@ end
 #   navigate_to(CheckoutPage).checkout('name' => name)
 # end
 
-# cannot find any way to make this work continuing to use
-# the above
 Given /^I have a pending adoption for "([^"]*)"$/ do |name|
   order = build(:order, :name => name)
   adoption = create(:adoption, :order => order)
