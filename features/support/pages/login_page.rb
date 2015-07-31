@@ -6,8 +6,8 @@ class LoginPage
   text_field(:password, id: 'password')
   button(:login, value: 'Login')
 
-  def login_to_system(username='admin', password='password')
-  # def login_to_system(username='steve', password='secret')
+  # def login_to_system(username='admin', password='password')
+  def login_to_system(username='steve', password='secret')
 
     self.username = username
     self.password = password

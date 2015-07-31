@@ -7,8 +7,8 @@ class HomePage
   include ErrorPanel
   include SideMenuPanel
 
-  page_url 'http://puppies.herokuapp.com'
-  # page_url 'http://localhost:3000'
+  # page_url 'http://puppies.herokuapp.com'
+  page_url 'http://localhost:3000'
 
 
   divs(:name, class: 'name')

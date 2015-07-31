@@ -5,7 +5,7 @@ class LandingPage
   include PageObject
   include SideMenuPanel
 
-  page_url 'http://puppies.herokuapp.com/admin'
-  # page_url 'http://localhost:3000/admin'
+  # page_url 'http://puppies.herokuapp.com/admin'
+  page_url 'http://localhost:3000/admin'
 
 end
