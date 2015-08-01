@@ -21,3 +21,4 @@ FactoryGirl.define do
     puppy Puppy.find_by_name('Hanna')
   end
 end
+
