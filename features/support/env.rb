@@ -4,6 +4,8 @@ require 'faker'
 require 'data_magic'
 require 'require_all'
 require 'factory_girl'
+require 'nokogiri'
+require 'builder'
 
 require_rel 'pages'
 
