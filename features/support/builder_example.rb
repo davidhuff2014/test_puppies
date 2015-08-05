@@ -1,7 +1,7 @@
 require 'builder'
 require 'faker'
 
-# builder = Builder::XmlTree.new(:target=>STDOUT, :indent=>2)
+# builder = Builder::XmlMarkup.new(:target=>STDOUT, :indent=>2)
 file = File.new('../../name_and_phone.xml', 'wb')
 builder = Builder::XmlMarkup.new :target => file, :indent => 2
 
