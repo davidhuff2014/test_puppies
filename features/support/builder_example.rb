@@ -6,7 +6,7 @@ file = File.new('../../name_and_phone.xml', 'wb')
 builder = Builder::XmlMarkup.new :target => file, :indent => 2
 
 xml = builder.contacts do
-  50.times do
+  5.times do
     xml = builder.contact do |c|
       c.name Faker::Name.name
       c.phone Faker::PhoneNumber.phone_number
