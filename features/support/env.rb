@@ -6,6 +6,7 @@ require 'require_all'
 require 'factory_girl'
 require 'nokogiri'
 require 'builder'
+require 'soap-object'
 
 require_rel 'pages'
 
@@ -19,3 +20,5 @@ PageObject::PageFactory.routes = {
 World(PageObject::PageFactory)
 
 World(FactoryGirl::Syntax::Methods)
+
+World(SoapObject::Factory)
