@@ -17,5 +17,5 @@ When(/^I look up the phone number for "([^"]*)"$/) do |name|
 end
 
 Then(/^I should see the phone number "([^"]*)"$/) do |phone_number|
-  expect(@node.at_xpath('//phone').content).to eq phone_number
+  expect(@node.at_xpath('.//phone').content).to eq phone_number
 end
