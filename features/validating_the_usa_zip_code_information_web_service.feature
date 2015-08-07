@@ -6,3 +6,9 @@ Feature: Validating the USA Zip Code Information Web Service
     And "get_info_by_city" should be supported
     And "get_info_by_state" should be supported
     And "get_info_by_zip" should be supported
+
+    Scenario: Getting the zip code information by zip code
+      When I ask for the zip code information for "44114"
+      Then I should get the following information
+      | city      | state | area_code | time_zone |
+      | Cleveland | OH    | 216       | E         |
