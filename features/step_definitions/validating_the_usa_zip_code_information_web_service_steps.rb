@@ -13,9 +13,13 @@ end
 Then(/^I should get the following information$/) do |table|
   expected = table.hashes.first
   using(ZipCodeInformationService) do |service|
-    expect(service.city).to eq expected['city']
-    expect(service.state).to eq expected['state']
-    expect(service.area_code).to eq expected['area_code']
-    expect(service.time_zone).to eq expected['time_zone']
+    # expect(service.city).to eq expected['city']
+    # expect(service.state).to eq expected['state']
+    # expect(service.area_code).to eq expected['area_code']
+    # expect(service.time_zone).to eq expected['time_zone']
+    expect(service.response_for(:city)).to eq expected['city']
+    expect(service.response_for(:state)).to eq expected['state']
+    expect(service.response_for(:area_code)).to eq expected['area_code']
+    expect(service.response_for(:time_zone)).to eq expected['time_zone']
   end
 end
