@@ -30,3 +30,17 @@ end
 Then(/^the text from the confirm should read "([^"]*)"$/) do |expected|
   expect(@confirm_text).to eq expected
 end
+
+When(/^I popup the prompt and enter "([^"]*)"$/) do |value_to_enter|
+  on(FramesPage) do |page|
+    @prompt_response = page.prompt_value(value_to_enter)
+  end
+end
+
+Then(/^the message from the prompt should read "([^"]*)"$/) do |message|
+  expect(@prompt_response[:message]).to eq message
+end
+
+And(/^the default value from the prompt should be "([^"]*)"$/) do |default|
+  expect(@prompt_response[:default_value]).to eq default
+end

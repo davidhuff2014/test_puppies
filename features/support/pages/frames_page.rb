@@ -33,4 +33,12 @@ class FramesPage
       end
     end
   end
+
+  def prompt_value(value)
+    in_frame(id: 'frame_3') do |frame|
+      @prompt_response = prompt('value', frame) do
+        button_element(id: 'prompt_button', frame: frame).click
+      end
+    end
+  end
 end

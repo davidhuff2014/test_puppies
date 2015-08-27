@@ -15,4 +15,10 @@ Feature: Testing Web 0.1
     When I popup the confirm
     Then the text from the confirm should read "set the value"
 
+  Scenario: Testing with prompt popups
+    Given I am on the frames page
+    When I popup the prompt and enter "Jared Gatorboy"
+    Then the message from the prompt should read "enter your name"
+    And the default value from the prompt should be "John Doe"
+
 
