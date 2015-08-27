@@ -4,3 +4,9 @@ Feature: Testing Web 0.1
     Given I am on the frames page
     When I send the text "frames are not my friend"
     Then the receiver should have "frames are not my friend"
+
+  Scenario: Testing with alert popups
+    Given I am on the frames page
+    When I popup the alert
+    Then the text from the alert should read "I am an alert"
+

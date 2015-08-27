@@ -10,3 +10,13 @@ end
 Then(/^the receiver should have "([^"]*)"$/) do |expected|
   expect(on(FramesPage).receiver).to eq expected
 end
+
+When(/^I popup the alert$/) do
+  on(FramesPage) do |page|
+    @alert_text = page.alert_text
+  end
+end
+
+Then(/^the text from the alert should read "([^"]*)"$/) do |expected|
+  expect(@alert_text).to eq expected
+end
