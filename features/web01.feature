@@ -10,3 +10,9 @@ Feature: Testing Web 0.1
     When I popup the alert
     Then the text from the alert should read "I am an alert"
 
+  Scenario: Testing with confirm popups
+    Given I am on the frames page
+    When I popup the confirm
+    Then the text from the confirm should read "set the value"
+
+

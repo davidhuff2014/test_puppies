@@ -20,3 +20,13 @@ end
 Then(/^the text from the alert should read "([^"]*)"$/) do |expected|
   expect(@alert_text).to eq expected
 end
+
+When(/^I popup the confirm$/) do
+  on(FramesPage) do |page|
+    @confirm_text = page.confirm_text
+  end
+end
+
+Then(/^the text from the confirm should read "([^"]*)"$/) do |expected|
+  expect(@confirm_text).to eq expected
+end
