@@ -21,4 +21,12 @@ Feature: Testing Web 0.1
     Then the message from the prompt should read "enter your name"
     And the default value from the prompt should be "John Doe"
 
+  Scenario: Testing with popup windows
+    Given I am on the frames page
+    When I popup a window
+    Then I should be on a page with the text "Success"
+    And I should be able to close the popup and return to the original window
+
+
+
 

@@ -13,6 +13,10 @@ class FramesPage
     text_field(:receiver, name: 'recieverElement', frame: frame)
   end
 
+  in_frame(id: 'frame_3') do |frame|
+    link(:popup_window, text: 'Popup Window', frame: frame)
+  end
+
   def send_message(message)
     self.sender = message
     send_to_receiver
@@ -41,4 +45,17 @@ class FramesPage
       end
     end
   end
+
+  def popup_a_window
+    popup_window
+    attach_to_window(title: 'Success')
+  end
+
+  def return_from_popup
+    attach_to_window(title: 'Frames')
+    attach_to_window(title: 'Success') do
+      button_element(value: 'Close Window').click
+    end
+  end
+
 end
