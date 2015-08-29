@@ -10,6 +10,9 @@ require 'soap-object'
 
 require_rel 'pages'
 
+PageObject.default_page_wait = 2
+PageObject.default_element_wait = 2
+
 PageObject::PageFactory.routes = {
                             :default => [[HomePage, :select_puppy],
                             [DetailsPage, :add_to_cart],
