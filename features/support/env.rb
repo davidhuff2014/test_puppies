@@ -1,3 +1,6 @@
+require 'fig_newton'
+FigNewton.load('local.yml')
+
 require 'rspec'
 require 'page-object'
 require 'faker'

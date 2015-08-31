@@ -8,8 +8,8 @@ class HomePage
   include SideMenuPanel
 
   # page_url 'http://puppies.herokuapp.com'
-  page_url 'http://localhost:3000'
-
+  # page_url 'http://localhost:3000'
+  page_url FigNewton.base_url
 
   divs(:name, class: 'name')
   buttons(:view_detail, value: 'View Details')
