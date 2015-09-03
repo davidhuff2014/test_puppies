@@ -1,5 +1,9 @@
 require 'fig_newton'
-FigNewton.load('local.yml')
+# FigNewton.load('local.yml')
+# FigNewton.load('heroku.yml')
+# these are now in the cucumber.yml
+
+
 
 require 'rspec'
 require 'page-object'
@@ -10,10 +14,11 @@ require 'factory_girl'
 require 'nokogiri'
 require 'builder'
 require 'soap-object'
+require 'pretty_face'
 
 require_rel 'pages'
 
-PageObject.default_page_wait = 2
+PageObject.default_page_wait = 10
 PageObject.default_element_wait = 2
 
 PageObject::PageFactory.routes = {

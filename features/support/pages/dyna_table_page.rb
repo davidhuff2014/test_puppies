@@ -36,9 +36,9 @@ class DynaTablePage
 
   def class_schedule_for(person)
     schedule = nil
-    wait_until(2) do
+    # wait_until(2) do
       schedule = dyna_table_element[person]['Schedule'].text
-    end
+    # end
     # needs this because of the wait
     schedule
   end
