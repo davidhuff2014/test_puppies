@@ -1,5 +1,5 @@
-default: FIG_NEWTON_FILE=local.yml --no-source --color --format pretty --format html --out testresults/report.html
-heroku: FIG_NEWTON_FILE=heroku.yml --no-source --color --format pretty --format html --out testresults/report.html
+#default: FIG_NEWTON_FILE=local.yml --no-source --color --format pretty --format html --out testresults/report.html
+#heroku: FIG_NEWTON_FILE=heroku.yml --no-source --color --format pretty --format html --out testresults/report.html
 
-#default: FIG_NEWTON_FILE=local.yml --no-source --color --format PrettyFace::Formatter::Html --out results/index.html
-#heroku: FIG_NEWTON_FILE=heroku.yml --no-source --color --format PrettyFace::Formatter::Html --out results/index.html
+default: FIG_NEWTON_FILE=local.yml --no-source --color --format PrettyFace::Formatter::Html --out results/index.html
+heroku: FIG_NEWTON_FILE=heroku.yml --no-source --color --format PrettyFace::Formatter::Html --out results/index.html
