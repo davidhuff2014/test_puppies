@@ -18,8 +18,8 @@ require 'pretty_face'
 
 require_rel 'pages'
 
-PageObject.default_page_wait = 10
-PageObject.default_element_wait = 2
+PageObject.default_page_wait = 20
+PageObject.default_element_wait = 5
 
 PageObject::PageFactory.routes = {
                             :default => [[HomePage, :select_puppy],
