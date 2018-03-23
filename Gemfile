@@ -19,3 +19,6 @@ gem 'fig_newton'
 # gem 'pretty_face', '0.10.3', git: 'https://github.com/cheezy/pretty_face.git'
 gem 'pretty_face'
 gem 'parallel_tests'
+
+# Alert from git-hub
+gem 'loofah', '~> 2.2.1'
